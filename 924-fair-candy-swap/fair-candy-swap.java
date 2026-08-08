@@ -11,21 +11,22 @@ class Solution {
             sum2+=arr2[i];
         }
 
-        int d= (sum1-sum2)/2;
+        int d=(sum1-sum2)/2;
 
-      
+        int i=0;
+        int j=0;
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
 
-        for(int i=0;i<arr1.length;i++){
-            for(int j=0;j<arr2.length;j++){
-                int diff=arr1[i]-arr2[j];
+        while(i<arr1.length && j<arr2.length){
+            int diff=arr1[i]-arr2[j];
 
-                if(diff==d) return new int[]{arr1[i],arr2[j]};
-                
-            }
+            if(diff==d) return new int[]{arr1[i],arr2[j]};
+            else if(diff<d) i++;
+            else j++;
 
-            
         }
-
         return new int[]{};
+       
     }
 }
