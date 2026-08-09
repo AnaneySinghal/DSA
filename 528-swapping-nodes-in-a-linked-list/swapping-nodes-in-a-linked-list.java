@@ -12,6 +12,7 @@ class Solution {
     public ListNode swapNodes(ListNode head, int k) {
         ListNode first=head;
         for(int i=1;i<k;i++){
+            if(first==null) return head;
             first=first.next;
         }
 
