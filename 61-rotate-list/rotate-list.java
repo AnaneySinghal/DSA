@@ -20,7 +20,7 @@ class Solution {
         return len;
     }
     public ListNode rotateRight(ListNode head, int k) {
-        if(head==null || head.next==null || k==0) return head;
+        if(head==null || head.next==null) return head;
         int n=length(head);
 
         k=k%n;
