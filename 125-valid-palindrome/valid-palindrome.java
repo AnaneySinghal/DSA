@@ -1,12 +1,12 @@
 class Solution {
-    boolean isAlphaNum(char ch){
-        if((ch>='a' && ch<='z')||
-         (ch>='A' && ch<='Z')||
-          (ch>='0' && ch<='9')){
-            return true;
-          } 
-          return false;
-    }
+    // boolean isAlphaNum(char ch){
+    //     if((ch>='a' && ch<='z')||
+    //      (ch>='A' && ch<='Z')||
+    //       (ch>='0' && ch<='9')){
+    //         return true;
+    //       } 
+    //       return false;
+    // }
     public boolean isPalindrome(String s) {
        int left=0 , right=s.length()-1;
 
@@ -14,10 +14,10 @@ class Solution {
         char l=s.charAt(left);
         char r=s.charAt(right);
 
-        if(!isAlphaNum(l)){
+        if(!Character.isLetterOrDigit(l)){
             left++;
         }
-        else if(!isAlphaNum(r)){
+        else if(!Character.isLetterOrDigit(r)){
             right--;
         }
         else{
