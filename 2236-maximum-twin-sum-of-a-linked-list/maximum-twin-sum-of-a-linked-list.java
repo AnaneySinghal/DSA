@@ -26,30 +26,19 @@ class Solution {
 
 
     public int pairSum(ListNode head) {
-        ListNode t=head;
-        ListNode d1=new ListNode(-1);
-        ListNode t1=d1;
-        ListNode d2=new ListNode(-1);
-        ListNode t2=d2;
-
-        while(t!=null){
-            t1.next=t;
-            t=t.next;
-            t1=t1.next;
-            t2.next=t;
-            t=t.next;
-            t2=t2.next;
-
+        ListNode h1=head;
+        ListNode slow=head;
+        ListNode fast=head;
+        while(fast!=null && fast.next!=null){
+            slow=slow.next;
+            fast=fast.next.next;
         }
-        t1.next=null;
-
-        ListNode h1=d1.next;
-        ListNode h2=reverseList(d2.next);
+        ListNode h2=reverseList(slow);
+       
+        
         int curr_sum=0;
-            int max_sum=-1;
-
-        while(h1!=null && h2!=null){
-            
+        int max_sum=-1;
+        while(h2!=null){
             curr_sum=h1.val+h2.val;
             max_sum=Math.max(max_sum,curr_sum);
             h1=h1.next;
