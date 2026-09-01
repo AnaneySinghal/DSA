@@ -36,11 +36,10 @@ class Solution {
         ListNode h2=reverseList(slow);
        
         
-        int curr_sum=0;
+
         int max_sum=-1;
         while(h2!=null){
-            curr_sum=h1.val+h2.val;
-            max_sum=Math.max(max_sum,curr_sum);
+            max_sum=Math.max(max_sum,(h1.val+h2.val));
             h1=h1.next;
             h2=h2.next;
 
