@@ -14,10 +14,12 @@ class Solution {
             if(top!=sectop){
                 pq.add(top-sectop);
             }
-            
+            else {
+                pq.add(0);
+            }
             
           }
-            return pq.isEmpty() ? 0 : pq.peek();
+            return pq.peek();
         
     }
 }
