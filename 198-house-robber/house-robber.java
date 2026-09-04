@@ -11,8 +11,6 @@ class Solution {
         if(dp[idx]!=-1) return dp[idx];
         int pick=nums[idx]+loot(idx+2,nums);
         int skip=loot(idx+1,nums);
-        int ans=Math.max(skip,pick);
-        dp[idx]=ans;
-        return ans;
+        return dp[idx]=Math.max(skip,pick);
     }
 }
