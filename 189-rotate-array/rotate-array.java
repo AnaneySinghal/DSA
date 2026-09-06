@@ -1,6 +1,6 @@
 class Solution {
      public void reverse(int i , int j , int[]arr){
-        while(i<j){
+        while(i<=j){
             int temp=arr[i];
             arr[i]=arr[j];
             arr[j]=temp;
