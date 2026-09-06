@@ -6,7 +6,7 @@ class Solution {
         int row=0;
         int col=m-1;
 
-        while(col>=0 && row<n){
+        while( row<n && col>=0 ){
     
             if(nums[row][col]==target) return true;
             else if(nums[row][col]>target){
