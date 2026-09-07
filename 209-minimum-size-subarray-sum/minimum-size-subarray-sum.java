@@ -9,8 +9,9 @@ class Solution {
             sum+=nums[right];
 
             while(sum>=target){
-                min_len=Math.min(min_len,right-left+1);
+                
                 sum-=nums[left];
+                min_len=Math.min(min_len,right-left+1);
                 left++;
             }
         }
