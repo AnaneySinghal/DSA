@@ -6,9 +6,9 @@ class Solution {
             if(Character.isUpperCase(ch)) upperCase++;
         }
 
-        if(upperCase==0) return true;
-        if(upperCase==s.length()) return true;
-        if(upperCase==1 && Character.isUpperCase(s.charAt(0))) return true;
+        if((upperCase==0)
+        ||(upperCase==s.length())
+        ||(upperCase==1 && Character.isUpperCase(s.charAt(0))) )return true;
         return false;
         
     }
