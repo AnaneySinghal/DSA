@@ -12,12 +12,19 @@ class Solution {
             }
         }
 
-        StringBuilder ans = new StringBuilder();
+        String ans = "";
 
+        // First traversal
+        Stack<Character> temp = new Stack<>();
         while (!st.isEmpty()) {
-            ans.append(st.pop());
+            temp.push(st.pop());
         }
 
-        return ans.reverse().toString();
+        // Second traversal
+        while (!temp.isEmpty()) {
+            ans += temp.pop();
+        }
+
+        return ans;
     }
 }
