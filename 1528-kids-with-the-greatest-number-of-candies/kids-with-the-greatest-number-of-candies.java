@@ -8,8 +8,7 @@ class Solution {
             }
         }
         for(int i=0;i<candies.length;i++){
-            if(candies[i]+extraCandies>=max) list.add(true);
-            else list.add(false);
+            list.add(candies[i]+extraCandies>=max);  
             
         }
         return list;
