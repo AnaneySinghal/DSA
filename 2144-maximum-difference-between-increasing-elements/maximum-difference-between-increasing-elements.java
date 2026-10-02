@@ -6,7 +6,9 @@ class Solution {
             if(nums[i]>min){
                 max_diff=Math.max(max_diff,nums[i]-min);
             }
-            min=Math.min(min,nums[i]);
+            else{
+                min=nums[i];
+            }
         }
         return max_diff;
         
