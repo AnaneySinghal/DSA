@@ -1,5 +1,7 @@
 class Solution {
     public boolean canConstruct(String ransomNote, String magazine) {
+        if (ransomNote.length() > magazine.length()) return false;
+
         char[] arr1=new char[26];
         char[] arr2= new char[26];
 
