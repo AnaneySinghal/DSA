@@ -4,15 +4,14 @@ class Solution {
 
         String first=strs[0];
         String last=strs[strs.length-1];
-        String ans="";
 
-        for(int i=0;i < first.length() && i < last.length();i++){
-            char ch1=first.charAt(i);
-            char ch2=last.charAt(i);
-            if(ch1==ch2) ans+=ch1;
+        int i=0;
+        while(i<first.length() && i<last.length()){
+            if(first.charAt(i)==last.charAt(i)) i++;
             else break;
         }
-        return ans;
+
+        return first.substring(0,i);
         
     }
 }
